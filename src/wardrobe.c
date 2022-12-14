@@ -4,7 +4,7 @@ static char tab[8] = "000:000";
 
 void scoreTeamA1()
 {
-
+    tab[2] = '1';
 }
 
 void scoreTeamA2()
