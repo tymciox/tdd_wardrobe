@@ -16,5 +16,5 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, FirstTest)
 {
-    TEST_FAIL_MESSAGE("Implement your test!");
+    TEST_ASSERT_EQUAL_STRING("000:000", getScore());
 }
