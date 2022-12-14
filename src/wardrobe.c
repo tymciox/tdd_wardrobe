@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+static char tab[8] = "000:000";
+
 void scoreTeamA1()
 {
 
@@ -32,5 +34,5 @@ void scoreTeamB3()
 
 char *getScore()
 {
-    return NULL;
+    return tab;
 }

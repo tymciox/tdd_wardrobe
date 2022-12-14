@@ -1,6 +1,7 @@
 #include "unity/fixture/unity_fixture.h"
 
 #include "assert.h"
+#include "wardrobe.h"
 
 TEST_GROUP(wardrobe);
 
