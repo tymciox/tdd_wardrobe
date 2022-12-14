@@ -15,7 +15,13 @@ TEST_TEAR_DOWN(wardrobe)
     /* Cleanup after every test */
 }
 
-TEST(wardrobe, FirstTest)
+TEST(wardrobe, InitTest)
 {
     TEST_ASSERT_EQUAL_STRING("000:000", getScore());
+}
+
+TEST(wardrobe, TeamAGetFirstPoint)
+{
+    scoreTeamA1();
+    TEST_ASSERT_EQUAL_STRING("001:000", getScore());
 }
