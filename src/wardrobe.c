@@ -48,28 +48,16 @@ char *convert(int number)
             number -= roman_tab[i].arabic;
         }
         i--;
-        printf("1 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
-        if ( number > roman_tab[i].arabic - 1)
+        for (int j=0; j<3; j++)
         {
-            strcat(tab, roman_tab[i].roman);
-            number -= roman_tab[i].arabic;
+            if ( number > roman_tab[i].arabic - 1)
+            {
+                strcat(tab, roman_tab[i].roman);
+                number -= roman_tab[i].arabic;
+            }
+            i--;
         }
-        i--;
-        printf("2 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
-        if (number > roman_tab[i].arabic-1)
-        {
-            strcat(tab, roman_tab[i].roman);
-            number -= roman_tab[i].arabic;
-        }
-        i--;
-        printf("3 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
-        if (number > roman_tab[i].arabic - 1)
-        {
-            strcat(tab, roman_tab[i].roman);
-            number -= roman_tab[i].arabic;
-        }
-        i--;
-        printf("4 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
+
         while (number > roman_tab[i].arabic-1)
         {
             strcat(tab, roman_tab[i].roman);
