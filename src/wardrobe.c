@@ -51,16 +51,16 @@ char *convert(int number)
             number -= roman_tab[6].arabic;
         }
 
-        if (number > 39)
+        if (number > roman_tab[5].arabic - 1)
         {
-            strcat(tab, "XL");
-            number -= 40;
+            strcat(tab, roman_tab[5].roman);
+            number -= roman_tab[5].arabic;
         }
 
-        while (number>9)
+        while (number > roman_tab[4].arabic-1)
         {
-            strcat(tab, "X");
-            number -= 10;
+            strcat(tab, roman_tab[4].roman);
+            number -= roman_tab[4].arabic;
         }
 
         if (number > 8)
