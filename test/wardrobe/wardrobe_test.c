@@ -81,3 +81,12 @@ TEST(wardrobe, Number279)
     TEST_ASSERT_EQUAL_STRING("CCLXXIX", convert(279));
 }
 
+TEST(wardrobe, Number890)
+{
+    TEST_ASSERT_EQUAL_STRING("DCCCXC", convert(890));
+}
+
+TEST(wardrobe, Number1999)
+{
+    TEST_ASSERT_EQUAL_STRING("MCMXCIX", convert(1999));
+}

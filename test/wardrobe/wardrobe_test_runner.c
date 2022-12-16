@@ -16,4 +16,6 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, Number93);
    RUN_TEST_CASE(wardrobe, Number100);
    RUN_TEST_CASE(wardrobe, Number279);
+   RUN_TEST_CASE(wardrobe, Number890);
+   RUN_TEST_CASE(wardrobe, Number1999);
 }
