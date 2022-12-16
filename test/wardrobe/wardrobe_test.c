@@ -20,7 +20,7 @@ TEST(wardrobe, InitTest)
     TEST_ASSERT_EQUAL_STRING("I", convert(1));
 }
 
-TEST(wardrobe, Number2)
+TEST(wardrobe, Number4)
 {
-    TEST_ASSERT_EQUAL_STRING("II", convert(2));
+    TEST_ASSERT_EQUAL_STRING("IV", convert(4));
 }
