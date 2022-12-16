@@ -40,13 +40,14 @@ char *convert(int number)
 {
     test_number++;
     printf("Test nr:%d\r\n", test_number);
-    for (int i=element_nr(roman_tab)-1; i>0; )
+    for (int i=element_nr(roman_tab)-1; i>=0; )
     {
         while(number > roman_tab[i].arabic-1)
         {
             strcat(tab, roman_tab[i].roman);
             number -= roman_tab[i].arabic;
         }
+        if (0 == i) break;
         i--;
         for (int j=0; j<3; j++)
         {
@@ -56,12 +57,6 @@ char *convert(int number)
                 number -= roman_tab[i].arabic;
             }
             i--;
-        }
-
-        while (number > roman_tab[i].arabic-1)
-        {
-            strcat(tab, roman_tab[i].roman);
-            number -= roman_tab[i].arabic;
         }
     }
 
