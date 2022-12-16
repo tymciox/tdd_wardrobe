@@ -5,3 +5,5 @@ void scoreTeamB1();
 void scoreTeamB2();
 void scoreTeamB3();
 char *getScore();
+
+void scoreInit();
