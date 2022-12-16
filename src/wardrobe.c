@@ -38,12 +38,24 @@ void scoreTeamA3()
 
 void scoreTeamB1()
 {
-
+    unsigned int scoreA = 0;
+    unsigned int scoreB = 0;
+    char pom[4] = {0};
+    sscanf(tab, "%u:%u", &scoreA, &scoreB);
+    scoreB += 1;
+    sprintf(pom, "%03u", scoreB);
+    memcpy(tab+4, pom, 3);
 }
 
 void scoreTeamB2()
 {
-
+    unsigned int scoreA = 0;
+    unsigned int scoreB = 0;
+    char pom[4] = {0};
+    sscanf(tab, "%u:%u", &scoreA, &scoreB);
+    scoreB += 2;
+    sprintf(pom, "%03u", scoreB);
+    memcpy(tab+4, pom, 3);
 }
 
 void scoreTeamB3()
