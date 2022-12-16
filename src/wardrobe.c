@@ -11,9 +11,17 @@ void init_convert(void)
 
 char *convert(int number)
 {
+
+    if (number/4 == 1)
+    {
+        strcat(tab, "IV");
+        number -= 4;
+    }
+
     for (uint8_t i=0; i<number; i++)
     {
-        tab[i] = 'I';
+        strcat(tab, "I");
     }
+
     return tab;
 }
