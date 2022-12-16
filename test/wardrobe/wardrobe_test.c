@@ -71,6 +71,11 @@ TEST(wardrobe, Number93)
     TEST_ASSERT_EQUAL_STRING("XCIII", convert(93));
 }
 
+TEST(wardrobe, Number100)
+{
+    TEST_ASSERT_EQUAL_STRING("C", convert(100));
+}
+
 TEST(wardrobe, Number279)
 {
     TEST_ASSERT_EQUAL_STRING("CCLXXIX", convert(279));
