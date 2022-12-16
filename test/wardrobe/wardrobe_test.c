@@ -61,3 +61,8 @@ TEST(wardrobe, Number45)
     TEST_ASSERT_EQUAL_STRING("XLV", convert(45));
 }
 
+TEST(wardrobe, Number57)
+{
+    TEST_ASSERT_EQUAL_STRING("LVII", convert(57));
+}
+
