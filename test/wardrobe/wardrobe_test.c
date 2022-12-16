@@ -8,6 +8,7 @@ TEST_GROUP(wardrobe);
 TEST_SETUP(wardrobe)
 {
     /* Init before every test */
+    init_convert();
 }
 
 TEST_TEAR_DOWN(wardrobe)
