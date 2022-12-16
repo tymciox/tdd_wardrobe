@@ -33,3 +33,10 @@ TEST(wardrobe, TeamAGetTwoPointInRow)
     scoreTeamA1();
     TEST_ASSERT_EQUAL_STRING("002:000", getScore());
 }
+
+TEST(wardrobe, TeamAGetOneAndTwoPoint)
+{
+    scoreTeamA1();
+    scoreTeamA2();
+    TEST_ASSERT_EQUAL_STRING("003:000", getScore());
+}

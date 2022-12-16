@@ -6,4 +6,5 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, InitTest);
    RUN_TEST_CASE(wardrobe, TeamAGetFirstPoint);
    RUN_TEST_CASE(wardrobe, TeamAGetTwoPointInRow);
+   RUN_TEST_CASE(wardrobe, TeamAGetOneAndTwoPoint);
 }
