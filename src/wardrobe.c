@@ -17,6 +17,12 @@ char *convert(int number)
         number -= 10;
     }
 
+    if (number/9 == 1)
+    {
+        strcat(tab, "IX");
+        number -= 9;
+    }
+
     if (number/5 == 1)
     {
         strcat(tab, "V");

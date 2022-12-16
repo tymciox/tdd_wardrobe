@@ -45,3 +45,8 @@ TEST(wardrobe, Number10)
 {
     TEST_ASSERT_EQUAL_STRING("X", convert(10));
 }
+
+TEST(wardrobe, Number9)
+{
+    TEST_ASSERT_EQUAL_STRING("IX", convert(9));
+}
