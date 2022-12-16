@@ -2,5 +2,11 @@
 
 char *convert(int number)
 {
-    return "I";
+    char tab[10] = {0};
+
+    for (uint8_t i=0; i<number; i++)
+    {
+        tab[i]="I";
+    }
+    return tab;
 }
