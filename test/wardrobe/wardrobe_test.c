@@ -70,3 +70,15 @@ TEST(wardrobe, TeamAGetTwoPointInRowAndTeamBGetTwoPointInRow)
     scoreTeamB1();
     TEST_ASSERT_EQUAL_STRING("002:002", getScore());
 }
+
+TEST(wardrobe, TeamAGet300AndTeamBGet500)
+{
+    for (uint8_t i=0; i<100; i++)
+    {
+        scoreTeamA1();
+        scoreTeamA2();
+        scoreTeamB2();
+        scoreTeamB3();
+    }
+    TEST_ASSERT_EQUAL_STRING("300:500", getScore());
+}
