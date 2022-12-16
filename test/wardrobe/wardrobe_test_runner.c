@@ -7,4 +7,5 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, Number3);
    RUN_TEST_CASE(wardrobe, Number4);
    RUN_TEST_CASE(wardrobe, Number5);
+   RUN_TEST_CASE(wardrobe, Number8);
 }
