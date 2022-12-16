@@ -14,9 +14,13 @@ struct arabic_roman
 static struct arabic_roman roman_tab[] = 
 {
     {1, "I"},
+    {4, "IV"},
     {5, "V"},
+    {9, "IX"},
     {10, "X"},
+    {40, "XL"},
     {50, "L"},
+    {90, "XC"},
     {100, "C"},
 };
 
@@ -29,25 +33,25 @@ char *convert(int number)
 {
     // for (int i=element_nr(roman_tab)-1; i>=0; i--)
     // {
-        while(number > roman_tab[4].arabic)
+        while(number > roman_tab[8].arabic-1)
         {
-            strcat(tab, roman_tab[4].roman);
-            number -= roman_tab[4].arabic;
+            strcat(tab, roman_tab[8].roman);
+            number -= roman_tab[8].arabic;
         }
 
-        if (number > 90)
+        if ( number > roman_tab[7].arabic - 1)
         {
-            strcat(tab, "XC");
-            number -= 90;
+            strcat(tab, roman_tab[7].roman);
+            number -= roman_tab[7].arabic;
         }
 
-        if (number > roman_tab[3].arabic)
+        if (number > roman_tab[6].arabic)
         {
-            strcat(tab, roman_tab[3].roman);
-            number -= roman_tab[3].arabic;
+            strcat(tab, roman_tab[6].roman);
+            number -= roman_tab[6].arabic;
         }
 
-        if (number > 40)
+        if (number > 39)
         {
             strcat(tab, "XL");
             number -= 40;
