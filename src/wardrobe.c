@@ -29,7 +29,11 @@ void scoreTeamA2()
 
 void scoreTeamA3()
 {
-
+    unsigned int scoreA = atoi(tab);
+    char pom[4] = {0};
+    scoreA += 3;
+    sprintf(pom, "%03u", scoreA);
+    memcpy(tab, pom, 3);
 }
 
 void scoreTeamB1()

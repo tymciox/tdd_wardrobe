@@ -40,3 +40,10 @@ TEST(wardrobe, TeamAGetOneAndTwoPoint)
     scoreTeamA2();
     TEST_ASSERT_EQUAL_STRING("003:000", getScore());
 }
+
+TEST(wardrobe, TeamAGetTwoAndThreePoint)
+{
+    scoreTeamA2();
+    scoreTeamA3();
+    TEST_ASSERT_EQUAL_STRING("005:000", getScore());
+}
