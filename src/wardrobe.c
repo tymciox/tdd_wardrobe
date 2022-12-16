@@ -58,7 +58,11 @@ void scoreTeamB2()
 
 void scoreTeamB3()
 {
-
+    char pom[4] = {0};
+    sscanf(tab, "%u:%u", &scoreA, &scoreB);
+    scoreB += 3;
+    sprintf(pom, "%03u", scoreB);
+    memcpy(tab+4, pom, 3);
 }
 
 char *getScore()

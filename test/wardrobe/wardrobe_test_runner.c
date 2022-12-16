@@ -9,4 +9,5 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, TeamAGetOneAndTwoPoint);
    RUN_TEST_CASE(wardrobe, TeamAGetTwoAndThreePoint);
    RUN_TEST_CASE(wardrobe, TeamBGetOneAndTwoPoint);
+   RUN_TEST_CASE(wardrobe, TeamBGetThreeAndTwoPoint);
 }
