@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdint.h>
 #include <string.h>
 
 static char tab[10] = {0};
@@ -11,6 +10,15 @@ void init_convert(void)
 
 char *convert(int number)
 {
+    if (number > 20)
+    {
+        for (int i=number; i>9; i-=10)
+        {
+            strcat(tab, "X");
+            number -= 10;
+        }
+    }
+
     if (number/10 == 1)
     {
         strcat(tab, "X");
@@ -35,7 +43,7 @@ char *convert(int number)
         number -= 4;
     }
 
-    for (uint8_t i=0; i<number; i++)
+    for (int i=0; i<number; i++)
     {
         strcat(tab, "I");
     }
