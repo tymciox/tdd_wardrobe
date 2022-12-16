@@ -11,11 +11,11 @@ void init_convert(void)
 
 char *convert(int number)
 {
-    // if (number/10 == 1)
-    // {
-    //     strcat(tab, "X");
-    //     number -= 10;
-    // }
+    if (number/10 == 1)
+    {
+        strcat(tab, "X");
+        number -= 10;
+    }
 
     if (number/5 == 1)
     {
