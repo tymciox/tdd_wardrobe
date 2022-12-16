@@ -1,7 +1,24 @@
 #include <stdio.h>
 #include <string.h>
 
+#define element_nr(a) (sizeof(a)/sizeof(struct arabic_roman))
+
 static char tab[10] = {0};
+
+struct arabic_roman
+{
+    int arabic;
+    char *roman;
+};
+
+static struct arabic_roman roman_tab[5] = 
+{
+    {1, "I"},
+    {5, "V"},
+    {10, "X"},
+    {50, "L"},
+    {100, "C"},
+};
 
 void init_convert(void)
 {
@@ -10,63 +27,71 @@ void init_convert(void)
 
 char *convert(int number)
 {
+    // for (int i=element_nr(roman_tab)-1; i>=0; i--)
+    // {
+        if (number > roman_tab[4].arabic)
+        {
+            strcat(tab, roman_tab[4].roman);
+            number -= roman_tab[4].arabic;
+        }
 
-    if (number > 90)
-    {
-        strcat(tab, "XC");
-        number -= 90;
-    }
+        if (number > 90)
+        {
+            strcat(tab, "XC");
+            number -= 90;
+        }
 
-    if (number > 50)
-    {
-        strcat(tab, "L");
-        number -= 50;
-    }
+        if (number > roman_tab[3].arabic)
+        {
+            strcat(tab, roman_tab[3].roman);
+            number -= roman_tab[3].arabic;
+        }
 
-    if (number > 40)
-    {
-        strcat(tab, "XL");
-        number -= 40;
-    }
+        if (number > 40)
+        {
+            strcat(tab, "XL");
+            number -= 40;
+        }
 
-    if (number > 20)
-    {
-        while (number>9)
+        if (number > 20)
+        {
+            while (number>9)
+            {
+                strcat(tab, "X");
+                number -= 10;
+            }
+        }
+
+        if (number/10 == 1)
         {
             strcat(tab, "X");
             number -= 10;
         }
-    }
 
-    if (number/10 == 1)
-    {
-        strcat(tab, "X");
-        number -= 10;
-    }
+        if (number/9 == 1)
+        {
+            strcat(tab, "IX");
+            number -= 9;
+        }
 
-    if (number/9 == 1)
-    {
-        strcat(tab, "IX");
-        number -= 9;
-    }
+        if (number/5 == 1)
+        {
+            strcat(tab, "V");
+            number -= 5;
+        }
 
-    if (number/5 == 1)
-    {
-        strcat(tab, "V");
-        number -= 5;
-    }
+        if (number/4 == 1)
+        {
+            strcat(tab, "IV");
+            number -= 4;
+        }
 
-    if (number/4 == 1)
-    {
-        strcat(tab, "IV");
-        number -= 4;
-    }
-
-    while (number>0)
-    {
-        strcat(tab, "I");
-        number -= 1;
-    }
+        while (number>0)
+        {
+            strcat(tab, "I");
+            number -= 1;
+        }
+    // }
 
     return tab;
 }
