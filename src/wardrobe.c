@@ -53,34 +53,25 @@ char *convert(int number)
             number -= 40;
         }
 
-        if (number > 20)
-        {
-            while (number>9)
-            {
-                strcat(tab, "X");
-                number -= 10;
-            }
-        }
-
-        if (number/10 == 1)
+        while (number>9)
         {
             strcat(tab, "X");
             number -= 10;
         }
 
-        if (number/9 == 1)
+        if (number > 8)
         {
             strcat(tab, "IX");
             number -= 9;
         }
 
-        if (number/5 == 1)
+        if (number > 4)
         {
             strcat(tab, "V");
             number -= 5;
         }
 
-        if (number/4 == 1)
+        if (number > 3)
         {
             strcat(tab, "IV");
             number -= 4;
