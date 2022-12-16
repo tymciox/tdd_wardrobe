@@ -5,9 +5,6 @@
 
 static char tab[10] = {0};
 
-/* TO DO */
-static int test_number = 0;
-
 struct arabic_roman
 {
     int arabic;
@@ -38,8 +35,6 @@ void init_convert(void)
 
 char *convert(int number)
 {
-    test_number++;
-    printf("Test nr:%d\r\n", test_number);
     for (int i=element_nr(roman_tab)-1; i>=0; )
     {
         while(number > roman_tab[i].arabic-1)
