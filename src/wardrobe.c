@@ -12,6 +12,12 @@ void init_convert(void)
 char *convert(int number)
 {
 
+    if (number/5 == 1)
+    {
+        strcat(tab, "V");
+        number -= 5;
+    }
+
     if (number/4 == 1)
     {
         strcat(tab, "IV");
