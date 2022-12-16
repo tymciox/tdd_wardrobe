@@ -8,7 +8,6 @@ TEST_GROUP(wardrobe);
 TEST_SETUP(wardrobe)
 {
     /* Init before every test */
-    scoreInit();
 }
 
 TEST_TEAR_DOWN(wardrobe)
@@ -18,67 +17,5 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    TEST_ASSERT_EQUAL_STRING("000:000", getScore());
-}
-
-TEST(wardrobe, TeamAGetFirstPoint)
-{
-    scoreTeamA1();
-    TEST_ASSERT_EQUAL_STRING("001:000", getScore());
-}
-
-TEST(wardrobe, TeamAGetTwoPointInRow)
-{
-    scoreTeamA1();
-    scoreTeamA1();
-    TEST_ASSERT_EQUAL_STRING("002:000", getScore());
-}
-
-TEST(wardrobe, TeamAGetOneAndTwoPoint)
-{
-    scoreTeamA1();
-    scoreTeamA2();
-    TEST_ASSERT_EQUAL_STRING("003:000", getScore());
-}
-
-TEST(wardrobe, TeamAGetTwoAndThreePoint)
-{
-    scoreTeamA2();
-    scoreTeamA3();
-    TEST_ASSERT_EQUAL_STRING("005:000", getScore());
-}
-
-TEST(wardrobe, TeamBGetOneAndTwoPoint)
-{
-    scoreTeamB1();
-    scoreTeamB2();
-    TEST_ASSERT_EQUAL_STRING("000:003", getScore());
-}
-
-TEST(wardrobe, TeamBGetThreeAndTwoPoint)
-{
-    scoreTeamB3();
-    scoreTeamB2();
-    TEST_ASSERT_EQUAL_STRING("000:005", getScore());
-}
-
-TEST(wardrobe, TeamAGetTwoPointInRowAndTeamBGetTwoPointInRow)
-{
-    scoreTeamA1();
-    scoreTeamA1();
-    scoreTeamB1();
-    scoreTeamB1();
-    TEST_ASSERT_EQUAL_STRING("002:002", getScore());
-}
-
-TEST(wardrobe, TeamAGet300AndTeamBGet500)
-{
-    for (uint8_t i=0; i<100; i++)
-    {
-        scoreTeamA1();
-        scoreTeamA2();
-        scoreTeamB2();
-        scoreTeamB3();
-    }
-    TEST_ASSERT_EQUAL_STRING("300:500", getScore());
+    TEST_FAIL_MESSAGE("Implement first test");
 }
