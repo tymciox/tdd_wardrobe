@@ -3,6 +3,8 @@
 #include <string.h>
 
 static char tab[8] = "000:000";
+static unsigned int scoreA = 0;
+static unsigned int scoreB = 0;
 
 void scoreInit()
 {
@@ -11,7 +13,7 @@ void scoreInit()
 
 void scoreTeamA1()
 {
-    unsigned int scoreA = atoi(tab);
+    scoreA = atoi(tab);
     char pom[4] = {0};
     scoreA += 1;
     sprintf(pom, "%03u", scoreA);
@@ -20,7 +22,7 @@ void scoreTeamA1()
 
 void scoreTeamA2()
 {
-    unsigned int scoreA = atoi(tab);
+    scoreA = atoi(tab);
     char pom[4] = {0};
     scoreA += 2;
     sprintf(pom, "%03u", scoreA);
@@ -29,7 +31,7 @@ void scoreTeamA2()
 
 void scoreTeamA3()
 {
-    unsigned int scoreA = atoi(tab);
+    scoreA = atoi(tab);
     char pom[4] = {0};
     scoreA += 3;
     sprintf(pom, "%03u", scoreA);
@@ -38,8 +40,6 @@ void scoreTeamA3()
 
 void scoreTeamB1()
 {
-    unsigned int scoreA = 0;
-    unsigned int scoreB = 0;
     char pom[4] = {0};
     sscanf(tab, "%u:%u", &scoreA, &scoreB);
     scoreB += 1;
@@ -49,8 +49,6 @@ void scoreTeamB1()
 
 void scoreTeamB2()
 {
-    unsigned int scoreA = 0;
-    unsigned int scoreB = 0;
     char pom[4] = {0};
     sscanf(tab, "%u:%u", &scoreA, &scoreB);
     scoreB += 2;
