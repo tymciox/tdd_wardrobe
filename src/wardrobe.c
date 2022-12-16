@@ -5,6 +5,9 @@
 
 static char tab[10] = {0};
 
+/* TO DO */
+static int test_number = 0;
+
 struct arabic_roman
 {
     int arabic;
@@ -22,6 +25,10 @@ static struct arabic_roman roman_tab[] =
     {50, "L"},
     {90, "XC"},
     {100, "C"},
+    {400, "CD"},
+    {500, "D"},
+    {900, "CM"},
+    {1000, "M"},
 };
 
 void init_convert(void)
@@ -31,62 +38,44 @@ void init_convert(void)
 
 char *convert(int number)
 {
-    // for (int i=element_nr(roman_tab)-1; i>=0; i--)
-    // {
-        while(number > roman_tab[8].arabic-1)
+    test_number++;
+    printf("Test nr:%d\r\n", test_number);
+    for (int i=element_nr(roman_tab)-1; i>0; )
+    {
+        while(number > roman_tab[i].arabic-1)
         {
-            strcat(tab, roman_tab[8].roman);
-            number -= roman_tab[8].arabic;
+            strcat(tab, roman_tab[i].roman);
+            number -= roman_tab[i].arabic;
         }
-
-        if ( number > roman_tab[7].arabic - 1)
+        i--;
+        printf("1 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
+        if ( number > roman_tab[i].arabic - 1)
         {
-            strcat(tab, roman_tab[7].roman);
-            number -= roman_tab[7].arabic;
+            strcat(tab, roman_tab[i].roman);
+            number -= roman_tab[i].arabic;
         }
-
-        if (number > roman_tab[6].arabic)
+        i--;
+        printf("2 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
+        if (number > roman_tab[i].arabic-1)
         {
-            strcat(tab, roman_tab[6].roman);
-            number -= roman_tab[6].arabic;
+            strcat(tab, roman_tab[i].roman);
+            number -= roman_tab[i].arabic;
         }
-
-        if (number > roman_tab[5].arabic - 1)
+        i--;
+        printf("3 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
+        if (number > roman_tab[i].arabic - 1)
         {
-            strcat(tab, roman_tab[5].roman);
-            number -= roman_tab[5].arabic;
+            strcat(tab, roman_tab[i].roman);
+            number -= roman_tab[i].arabic;
         }
-
-        while (number > roman_tab[4].arabic-1)
+        i--;
+        printf("4 i: %d; number: %d, arabic: %d \r\n", i, number, roman_tab[i].arabic);
+        while (number > roman_tab[i].arabic-1)
         {
-            strcat(tab, roman_tab[4].roman);
-            number -= roman_tab[4].arabic;
+            strcat(tab, roman_tab[i].roman);
+            number -= roman_tab[i].arabic;
         }
-
-        if (number > 8)
-        {
-            strcat(tab, "IX");
-            number -= 9;
-        }
-
-        if (number > 4)
-        {
-            strcat(tab, "V");
-            number -= 5;
-        }
-
-        if (number > 3)
-        {
-            strcat(tab, "IV");
-            number -= 4;
-        }
-
-        while (number>0)
-        {
-            strcat(tab, "I");
-            number -= 1;
-        }
-    // }
+    }
 
     return tab;
 }
