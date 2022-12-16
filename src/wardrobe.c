@@ -11,7 +11,7 @@ struct arabic_roman
     char *roman;
 };
 
-static struct arabic_roman roman_tab[5] = 
+static struct arabic_roman roman_tab[] = 
 {
     {1, "I"},
     {5, "V"},
@@ -29,7 +29,7 @@ char *convert(int number)
 {
     // for (int i=element_nr(roman_tab)-1; i>=0; i--)
     // {
-        if (number > roman_tab[4].arabic)
+        while(number > roman_tab[4].arabic)
         {
             strcat(tab, roman_tab[4].roman);
             number -= roman_tab[4].arabic;
