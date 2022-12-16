@@ -17,5 +17,5 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    TEST_FAIL_MESSAGE("Implement first test");
+    TEST_ASSERT_EQUAL_STRING("I", convert(1));
 }

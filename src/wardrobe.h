@@ -1,0 +1,1 @@
+char *convert(int number);
