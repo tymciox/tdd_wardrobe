@@ -10,6 +10,13 @@ void init_convert(void)
 
 char *convert(int number)
 {
+
+    if (number > 90)
+    {
+        strcat(tab, "XC");
+        number -= 90;
+    }
+
     if (number > 50)
     {
         strcat(tab, "L");
