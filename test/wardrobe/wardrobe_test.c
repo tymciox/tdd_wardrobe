@@ -26,7 +26,7 @@ TEST(wardrobe, Number3)
     TEST_ASSERT_EQUAL_STRING("III", convert(3));
 }
 
-// TEST(wardrobe, Number4)
-// {
-//     TEST_ASSERT_EQUAL_STRING("IV", convert(4));
-// }
+TEST(wardrobe, Number4)
+{
+    TEST_ASSERT_EQUAL_STRING("IV", convert(4));
+}
