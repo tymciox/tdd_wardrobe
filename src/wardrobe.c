@@ -12,7 +12,7 @@ char *convert(int number)
 {
     if (number > 20)
     {
-        for (int i=number; i>9; i-=10)
+        while (number>9)
         {
             strcat(tab, "X");
             number -= 10;
@@ -43,9 +43,10 @@ char *convert(int number)
         number -= 4;
     }
 
-    for (int i=0; i<number; i++)
+    while (number>0)
     {
         strcat(tab, "I");
+        number -= 1;
     }
 
     return tab;
