@@ -61,3 +61,12 @@ TEST(wardrobe, TeamBGetThreeAndTwoPoint)
     scoreTeamB2();
     TEST_ASSERT_EQUAL_STRING("000:005", getScore());
 }
+
+TEST(wardrobe, TeamAGetTwoPointInRowAndTeamBGetTwoPointInRow)
+{
+    scoreTeamA1();
+    scoreTeamA1();
+    scoreTeamB1();
+    scoreTeamB1();
+    TEST_ASSERT_EQUAL_STRING("002:002", getScore());
+}
