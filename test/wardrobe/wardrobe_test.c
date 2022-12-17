@@ -8,7 +8,6 @@ TEST_GROUP(wardrobe);
 TEST_SETUP(wardrobe)
 {
     /* Init before every test */
-    init_convert();
 }
 
 TEST_TEAR_DOWN(wardrobe)
@@ -18,75 +17,5 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    TEST_ASSERT_EQUAL_STRING("I", convert(1));
-}
-
-TEST(wardrobe, Number3)
-{
-    TEST_ASSERT_EQUAL_STRING("III", convert(3));
-}
-
-TEST(wardrobe, Number4)
-{
-    TEST_ASSERT_EQUAL_STRING("IV", convert(4));
-}
-
-TEST(wardrobe, Number5)
-{
-    TEST_ASSERT_EQUAL_STRING("V", convert(5));
-}
-
-TEST(wardrobe, Number8)
-{
-    TEST_ASSERT_EQUAL_STRING("VIII", convert(8));
-}
-
-TEST(wardrobe, Number9)
-{
-    TEST_ASSERT_EQUAL_STRING("IX", convert(9));
-}
-
-TEST(wardrobe, Number10)
-{
-    TEST_ASSERT_EQUAL_STRING("X", convert(10));
-}
-
-TEST(wardrobe, Number30)
-{
-    TEST_ASSERT_EQUAL_STRING("XXX", convert(30));
-}
-
-TEST(wardrobe, Number45)
-{
-    TEST_ASSERT_EQUAL_STRING("XLV", convert(45));
-}
-
-TEST(wardrobe, Number57)
-{
-    TEST_ASSERT_EQUAL_STRING("LVII", convert(57));
-}
-
-TEST(wardrobe, Number93)
-{
-    TEST_ASSERT_EQUAL_STRING("XCIII", convert(93));
-}
-
-TEST(wardrobe, Number100)
-{
-    TEST_ASSERT_EQUAL_STRING("C", convert(100));
-}
-
-TEST(wardrobe, Number279)
-{
-    TEST_ASSERT_EQUAL_STRING("CCLXXIX", convert(279));
-}
-
-TEST(wardrobe, Number890)
-{
-    TEST_ASSERT_EQUAL_STRING("DCCCXC", convert(890));
-}
-
-TEST(wardrobe, Number1999)
-{
-    TEST_ASSERT_EQUAL_STRING("MCMXCIX", convert(1999));
+    TEST_FAIL_MESSAGE("Implement Test");
 }
