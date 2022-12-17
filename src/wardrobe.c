@@ -46,7 +46,7 @@ char *convert(int number)
         i--;
         for (int j=0; j<3; j++)
         {
-            if ( number > roman_tab[i].arabic - 1)
+            if ( number >= roman_tab[i].arabic)
             {
                 strcat(tab, roman_tab[i].roman);
                 number -= roman_tab[i].arabic;
