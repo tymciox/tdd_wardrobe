@@ -3,9 +3,11 @@
 #include "assert.h"
 #include "wardrobe.h"
 
-int expected_tab[5][10] = 
+#define NUM_OF_ELEMENT(a)   (sizeof(a)/sizeof(a[0]))
+
+static int ExpectedTab[5] = 
 {
-    {50, 50, 50, 50, 50},
+    50, 50, 50, 50, 50
 };
 
 TEST_GROUP(wardrobe);
@@ -22,5 +24,5 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    TEST_ASSERT_EQUAL_INT_ARRAY(expected_tab, combination(), sizeof(expected_tab));
+    TEST_ASSERT_EQUAL_INT_ARRAY(ExpectedTab, combination(), NUM_OF_ELEMENT(ExpectedTab));
 }
