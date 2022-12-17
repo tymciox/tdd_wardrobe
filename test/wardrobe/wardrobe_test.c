@@ -3,8 +3,6 @@
 #include "assert.h"
 #include "wardrobe.h"
 
-#define NUM_OF_ELEMENT(a)   (sizeof(a)/sizeof(a[0]))
-
 TEST_GROUP(wardrobe);
 
 TEST_SETUP(wardrobe)

@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "unity_fixture.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "wardrobe.h": "c",
+        "assert.h": "c"
     }
 }
