@@ -5,11 +5,6 @@
 
 #define NUM_OF_ELEMENT(a)   (sizeof(a)/sizeof(a[0]))
 
-static int ExpectedTab[5] = 
-{
-    50, 50, 50, 50, 50
-};
-
 TEST_GROUP(wardrobe);
 
 TEST_SETUP(wardrobe)
@@ -24,5 +19,16 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
+    int ExpectedTab[5] = {50, 50, 50, 50, 50};
+    TEST_ASSERT_EQUAL_INT_ARRAY(ExpectedTab, combination(), NUM_OF_ELEMENT(ExpectedTab));
+}
+
+TEST(wardrobe, ReturnTwoCombination)
+{
+    int ExpectedTab[5][10] = 
+    {
+        {50, 50, 50, 50, 50},
+        {100, 100, 50},
+    };
     TEST_ASSERT_EQUAL_INT_ARRAY(ExpectedTab, combination(), NUM_OF_ELEMENT(ExpectedTab));
 }
