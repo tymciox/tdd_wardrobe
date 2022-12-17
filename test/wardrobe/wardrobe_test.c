@@ -8,6 +8,7 @@ TEST_GROUP(wardrobe);
 TEST_SETUP(wardrobe)
 {
     /* Init before every test */
+    init();
 }
 
 TEST_TEAR_DOWN(wardrobe)
@@ -17,7 +18,7 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    int ExpectedTab[5] = {50, 50, 50, 50, 50};
+    int ExpectedTab[10][5] = {{50, 50, 50, 50, 50}};
     TEST_ASSERT_EQUAL_INT_ARRAY(ExpectedTab, combination(), NUM_OF_ELEMENT(ExpectedTab));
 }
 
