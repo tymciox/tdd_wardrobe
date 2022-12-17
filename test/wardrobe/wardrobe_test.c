@@ -24,7 +24,7 @@ TEST(wardrobe, InitTest)
 
 TEST(wardrobe, ReturnTwoCombination)
 {
-    int ExpectedTab[5][10] = 
+    int ExpectedTab[10][5] = 
     {
         {50, 50, 50, 50, 50},
         {100, 100, 50},
