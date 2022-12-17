@@ -3,6 +3,11 @@
 #include "assert.h"
 #include "wardrobe.h"
 
+int expected_tab[5][10] = 
+{
+    {50, 50, 50, 50, 50},
+};
+
 TEST_GROUP(wardrobe);
 
 TEST_SETUP(wardrobe)
@@ -17,5 +22,5 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    TEST_FAIL_MESSAGE("Implement Test");
+    TEST_ASSERT_EQUAL_INT_ARRAY(expected_tab, combination(), sizeof(expected_tab));
 }
