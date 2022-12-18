@@ -8,4 +8,5 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, AddTwoNumber);
    RUN_TEST_CASE(wardrobe, AddManyNumber);
    RUN_TEST_CASE(wardrobe, NewLineInstedComma);
+   RUN_TEST_CASE(wardrobe, SupportDiffrentDelimiters);
 }

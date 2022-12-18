@@ -41,3 +41,8 @@ TEST(wardrobe, NewLineInstedComma)
     TEST_ASSERT_EQUAL_INT(245+8+200+222+0, add("245\n8,200\n222,0"));
 }
 
+TEST(wardrobe, SupportDiffrentDelimiters)
+{
+    TEST_ASSERT_EQUAL_INT(2145+38+0+222+651, add("//;\n2145;38\n0;222\n651"));
+}
+
