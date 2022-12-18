@@ -18,6 +18,6 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    TEST_FAIL_MESSAGE("Implement test");
+    TEST_ASSERT_EQUAL_INT(0, add(""));
 }
 
