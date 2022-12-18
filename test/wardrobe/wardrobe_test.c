@@ -21,3 +21,8 @@ TEST(wardrobe, InitTest)
     TEST_ASSERT_EQUAL_INT(0, add(""));
 }
 
+TEST(wardrobe, FirstTest)
+{
+    TEST_ASSERT_EQUAL_INT(1, add("1"));
+}
+
