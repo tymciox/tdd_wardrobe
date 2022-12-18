@@ -13,4 +13,5 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, NegativeNumber);
    RUN_TEST_CASE(wardrobe, NumberBiggerThan1000);
    RUN_TEST_CASE(wardrobe, TwoDelimitersInRow);
+   RUN_TEST_CASE(wardrobe, DelimitersCanBeOfAnyLenght);
 }

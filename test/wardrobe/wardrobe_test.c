@@ -65,3 +65,8 @@ TEST(wardrobe, TwoDelimitersInRow)
 {
     TEST_ASSERT_EQUAL_INT(0, add("2145,\n38"));
 }
+
+TEST(wardrobe, DelimitersCanBeOfAnyLenght)
+{
+    TEST_ASSERT_EQUAL_INT(6, add("//[***]\n1***2***3"));
+}
