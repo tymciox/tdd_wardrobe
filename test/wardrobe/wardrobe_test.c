@@ -18,16 +18,6 @@ TEST_TEAR_DOWN(wardrobe)
 
 TEST(wardrobe, InitTest)
 {
-    int ExpectedTab[10][5] = {{50, 50, 50, 50, 50}};
-    TEST_ASSERT_EQUAL_INT_ARRAY(ExpectedTab, combination(), NUM_OF_ELEMENT(ExpectedTab));
+    TEST_FAIL_MESSAGE("Implement test");
 }
 
-TEST(wardrobe, ReturnTwoCombination)
-{
-    int ExpectedTab[10][5] = 
-    {
-        {50, 50, 50, 50, 50},
-        {100, 100, 50},
-    };
-    TEST_ASSERT_EQUAL_INT_ARRAY(ExpectedTab, combination(), NUM_OF_ELEMENT(ExpectedTab));
-}
