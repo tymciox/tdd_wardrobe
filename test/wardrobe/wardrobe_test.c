@@ -26,3 +26,8 @@ TEST(wardrobe, FirstTest)
     TEST_ASSERT_EQUAL_INT(1, add("1"));
 }
 
+TEST(wardrobe, AddTwoNumber)
+{
+    TEST_ASSERT_EQUAL_INT(3, add("1,2"));
+}
+
