@@ -4,6 +4,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define IS_EMPTY(a) (NULL == a || '\0' == *a)
+#define DEFAULT_DELIMITER   ','
+static int set_delimiters(const char *const numbers, char *delimiters);
+
 void init(void)
 {
 
@@ -16,25 +20,22 @@ int add(char *numbers)
     char delimiters[5] = {0};
     bool negative_number = false;
 
-    if (NULL == numbers || '\0' == *numbers)
+    if (IS_EMPTY(numbers))
     {
         return 0;
     }
 
-    if (0 == strncmp(numbers, "//", 2))
+    if (set_delimiters(numbers, delimiters) == 1) return 0;
+
+    if (delimiters[0] != DEFAULT_DELIMITER)
     {
-        if (*(numbers+3) != '\n') return 0;
-        delimiters[0] = *(numbers+2);
-        num_ptr = numbers + 4;
+        num_ptr = numbers + 3;
     }
     else
     {
-        delimiters[0] = ',';
-        num_ptr = numbers;
+        num_ptr = numbers - 1;
     }
-    strcat(delimiters, "\n");
 
-    num_ptr--;
     do
     {
         if (atoi(num_ptr+1)<0) 
@@ -48,4 +49,21 @@ int add(char *numbers)
     
     if (true == negative_number) return 0;
     return sum;
+}
+
+
+static int set_delimiters(const char *const numbers, char *delimiters)
+{
+    if (0 == strncmp(numbers, "//", 2))
+    {
+        if (*(numbers+3) != '\n') return 1;
+        delimiters[0] = *(numbers+2);
+    }
+    else
+    {
+        delimiters[0] = ',';
+    }
+    strcat(delimiters, "\n");
+    
+    return 0;
 }
