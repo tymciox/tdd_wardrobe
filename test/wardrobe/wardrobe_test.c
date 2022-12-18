@@ -46,4 +46,7 @@ TEST(wardrobe, SupportDiffrentDelimiters)
     TEST_ASSERT_EQUAL_INT(2145+38+0+222+651, add("//;\n2145;38\n0;222\n651"));
 }
 
-// is not end \n
+TEST(wardrobe, SupportDiffrentDelimitersWithoutEndLine)
+{
+    TEST_ASSERT_EQUAL_INT(2145+38+0+222+651, add("//;2145;38\n0;222\n651"));
+}
