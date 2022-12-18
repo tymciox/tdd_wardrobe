@@ -36,3 +36,8 @@ TEST(wardrobe, AddManyNumber)
     TEST_ASSERT_EQUAL_INT(1202, add("1,2,200,222,777"));
 }
 
+TEST(wardrobe, NewLineInstedComma)
+{
+    TEST_ASSERT_EQUAL_INT(245+8+200+222+0, add("245\n8,200\n222,0"));
+}
+
