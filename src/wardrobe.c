@@ -41,8 +41,9 @@ int add(char *numbers)
     do
     {
         SKIP_DELIMITER(num_ptr);
+        if (*num_ptr == delimiters[0] || *num_ptr == delimiters[1]) return 0;
         if (check_if_parameter_is_negative(num_ptr)) negative_number = true;
-        if (atoi(num_ptr)<=1000) sum += atoi(num_ptr);
+        if (atoi(num_ptr)<=1000) sum += strtol(num_ptr, NULL, 0);
         num_ptr = strpbrk(num_ptr, delimiters);
     } while (num_ptr != NULL);
     
