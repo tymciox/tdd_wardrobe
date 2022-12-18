@@ -7,6 +7,7 @@ void init(void)
 {
 
 }
+
 int add(char *numbers)
 {
     int sum = 0;
@@ -18,11 +19,11 @@ int add(char *numbers)
     }
 
     num_ptr = numbers;
-    sum = atoi(num_ptr);
+    num_ptr--;
     do
     {
         sum += atoi(num_ptr+1);
-        num_ptr = strchr(num_ptr+1, ',');
+        num_ptr = strpbrk(num_ptr+1, "\n,");
     } while (num_ptr != NULL);
     
     return sum;
