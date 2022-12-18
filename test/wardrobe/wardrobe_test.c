@@ -43,7 +43,7 @@ TEST(wardrobe, NewLineInstedComma)
 
 TEST(wardrobe, SupportDiffrentDelimiters)
 {
-    TEST_ASSERT_EQUAL_INT(2145+38+0+222+651, add("//;\n2145;38\n0;222\n651"));
+    TEST_ASSERT_EQUAL_INT(145+38+0+222+651, add("//;\n145;38\n0;222\n651"));
 }
 
 TEST(wardrobe, SupportDiffrentDelimitersWithoutEndLine)
@@ -55,3 +55,10 @@ TEST(wardrobe, NegativeNumber)
 {
     TEST_ASSERT_EQUAL_INT(0, add("//;\n-2145;38\n0;-222\n651"));
 }
+
+TEST(wardrobe, NumberBiggerThan1000)
+{
+    TEST_ASSERT_EQUAL_INT(38, add("2145;38"));
+}
+
+// Test ,\n two delimiters in row

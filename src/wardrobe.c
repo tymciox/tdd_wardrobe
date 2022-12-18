@@ -47,6 +47,7 @@ int add(char *numbers)
     } while (num_ptr != NULL);
     
     if (true == negative_number) return 0;
+    
     return sum;
 }
 
