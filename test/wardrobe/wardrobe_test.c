@@ -50,3 +50,8 @@ TEST(wardrobe, SupportDiffrentDelimitersWithoutEndLine)
 {
     TEST_ASSERT_EQUAL_INT(0, add("//;2145;38\n0;222\n651"));
 }
+
+TEST(wardrobe, NegativeNumber)
+{
+    TEST_ASSERT_EQUAL_INT(0, add("//;\n-2145;38\n0;-222\n651"));
+}
