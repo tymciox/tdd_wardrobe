@@ -21,6 +21,7 @@ int add(char *numbers)
 
     if (0 == strncmp(numbers, "//", 2))
     {
+        if (*(numbers+3) != '\n') return 0;
         delimiters[0] = *(numbers+2);
         num_ptr = numbers + 4;
     }
