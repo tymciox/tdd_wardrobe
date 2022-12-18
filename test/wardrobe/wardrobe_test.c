@@ -61,4 +61,9 @@ TEST(wardrobe, NumberBiggerThan1000)
     TEST_ASSERT_EQUAL_INT(38, add("2145,38"));
 }
 
+TEST(wardrobe, TwoDelimitersInRow)
+{
+    TEST_ASSERT_EQUAL_INT(38, add("2145,\n38"));
+}
+
 // Test ,\n two delimiters in row
