@@ -42,7 +42,7 @@ int add(char *numbers)
     {
         SKIP_DELIMITER(num_ptr);
         if (check_if_parameter_is_negative(num_ptr)) negative_number = true;
-        sum += atoi(num_ptr);
+        if (atoi(num_ptr)<=1000) sum += atoi(num_ptr);
         num_ptr = strpbrk(num_ptr, delimiters);
     } while (num_ptr != NULL);
     
