@@ -6,4 +6,5 @@ TEST_GROUP_RUNNER(wardrobe)
    RUN_TEST_CASE(wardrobe, InitTest);
    RUN_TEST_CASE(wardrobe, FirstTest);
    RUN_TEST_CASE(wardrobe, AddTwoNumber);
+   RUN_TEST_CASE(wardrobe, AddManyNumber);
 }

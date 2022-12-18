@@ -31,3 +31,8 @@ TEST(wardrobe, AddTwoNumber)
     TEST_ASSERT_EQUAL_INT(3, add("1,2"));
 }
 
+TEST(wardrobe, AddManyNumber)
+{
+    TEST_ASSERT_EQUAL_INT(1202, add("1,2,200,222,777"));
+}
+
