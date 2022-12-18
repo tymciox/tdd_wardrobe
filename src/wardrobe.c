@@ -8,6 +8,7 @@
 #define DEFAULT_DELIMITER   ','
 #define START_FROM_BEGIN(a)  (a-1)   
 #define SKIP_FIRST_LINE(a)  (a+3)
+#define SKIP_DELIMITER(a)   (a++)
 
 static int set_delimiters(const char *const numbers, char *delimiters);
 static bool check_if_parameter_is_negative(char *num_ptr);
@@ -39,7 +40,7 @@ int add(char *numbers)
 
     do
     {
-        num_ptr++;
+        SKIP_DELIMITER(num_ptr);
         if (check_if_parameter_is_negative(num_ptr)) negative_number = true;
         sum += atoi(num_ptr);
         num_ptr = strpbrk(num_ptr, delimiters);
