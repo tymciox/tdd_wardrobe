@@ -8,5 +8,10 @@ void init(void)
 
 int add(char *numbers)
 {
-    return 0;
+    if (NULL == numbers || '\0' == *numbers)
+    {
+        return 0;
+    }
+    
+    return 1;
 }
