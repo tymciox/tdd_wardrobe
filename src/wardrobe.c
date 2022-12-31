@@ -35,23 +35,12 @@ void init_convert(void)
 
 char *convert(int number)
 {
-    for (int i=element_nr(roman_tab)-1; i>=0; )
+    for (int i=element_nr(roman_tab)-1; i>=0; i--)
     {
         while(number > roman_tab[i].arabic-1)
         {
             strcat(tab, roman_tab[i].roman);
             number -= roman_tab[i].arabic;
-        }
-        if (0 == i) break;
-        i--;
-        for (int j=0; j<3; j++)
-        {
-            if ( number >= roman_tab[i].arabic)
-            {
-                strcat(tab, roman_tab[i].roman);
-                number -= roman_tab[i].arabic;
-            }
-            i--;
         }
     }
 
